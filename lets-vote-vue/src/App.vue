@@ -1,5 +1,5 @@
 <template>
-  <VotingCard title="Devemos adiar a entrega" status="open" :votes="[{option: 'Sim', count: 8}, {option: 'Não', count: 3}]" />
+  <VotingCard :title="title" :status="status" :votes="votes" @vote="vote" @changeStatus="changeStatus"/>
 </template>
 
 <script>
@@ -9,6 +9,26 @@ export default {
   name: 'App',
   components: {
     VotingCard 
+  },
+  data() {
+    return {
+      title: 'Reunião amanhã',
+      status: 'open',
+      votes: [
+        { option: 'Sim', count: 6 }, 
+        { option: 'Não', count: 3 },
+        { option: 'Talvez', count: 1 },
+      ],
+    }
+  },
+  methods: {
+    vote(index) {
+      this.votes[index].count++;
+      this.changeStatus();
+    },
+    changeStatus() {
+      this.status = this.status == 'open' ? 'closed' : 'open';
+    }
   }
 }
 </script>

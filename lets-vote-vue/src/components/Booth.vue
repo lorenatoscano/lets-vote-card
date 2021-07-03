@@ -1,6 +1,10 @@
 <template>
   <div class="booth-container">
-    <button v-for="option in options" :key="option">
+    <button 
+      v-for="(option, index) in options" 
+      :key="index"
+      @click="$emit('vote', index)"
+    >
       {{ option }}
     </button>
   </div>

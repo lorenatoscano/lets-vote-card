@@ -2,7 +2,11 @@
   <div class="overlay">
     <div class="card-container">
       <h2 class="title">{{ title }}?</h2>
-      <Booth v-if="status == 'open'" :options="options" />
+      <Booth 
+        v-if="status == 'open'" 
+        :options="options" 
+        @vote="$emit('vote', $event)"
+      />
       <Result v-else :votes="votes" />
     </div>
   </div>
@@ -23,11 +27,11 @@ export default {
   components: {
     Booth, Result
   },
-  data() {
-    return {
-      options: ['Sim', 'Não', 'Talvez'],
+  computed: {
+    options() {
+      return this.votes.map(vote => vote.option);
     }
-  }
+  },
 }
 </script>
 
