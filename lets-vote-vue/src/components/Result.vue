@@ -10,7 +10,10 @@
 export default {
   name: 'Result',
   props: {
-    votes: Array,
+    votes: { 
+      type: Array, 
+      required: true
+    },
   },
   methods: {
     calculatePercentage(value) {
@@ -24,7 +27,11 @@ export default {
         total += vote.count;
       }
 
-      return total;
+      if (total > 0) {
+        return total;
+      }
+      
+      return 1;
     }
   }
 }

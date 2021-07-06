@@ -37,6 +37,7 @@ export default {
 body {
   color: #666666;
 }
+
 body, button {
   font: 400 1rem "Inter", sans-serif;
 }

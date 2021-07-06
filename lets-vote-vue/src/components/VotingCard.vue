@@ -20,9 +20,17 @@ import Booth from './Booth.vue';
 export default {
   name: 'VotingCard',
   props: {
-    title: String,
-    status: String,
-    votes: Array,
+    title: { 
+      type: String, 
+    },
+    status: { 
+      type: String, 
+      default: "open"
+    },
+    votes: { 
+      type: Array, 
+      required: true
+    },
   },
   components: {
     Booth, Result
@@ -35,7 +43,7 @@ export default {
 }
 </script>
 
-<style scoped>  
+<style scoped> 
 .overlay {
   background: rgba(242, 243, 245, 0.8);
   position: fixed;

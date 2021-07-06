@@ -14,7 +14,10 @@
 export default {
   name: 'Booth',
   props: {
-    options: Array,
+    options: {
+      type: Array,
+      required: true
+    },
   }
 }
 </script>
