@@ -23,9 +23,6 @@ export default {
   },
   methods: {
     vote(index) {
-      // const temp = [...this.votes];
-      // temp[index].count++;
-      // this.votes = temp;
       this.votes[index].count++;
       this.changeStatus();
     },
