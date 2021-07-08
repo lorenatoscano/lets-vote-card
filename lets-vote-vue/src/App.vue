@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import VotingCard from './components/VotingCard.vue'
+import VotingCard from './components/VotingCard.vue';
 
 export default {
   name: 'App',
@@ -23,6 +23,9 @@ export default {
   },
   methods: {
     vote(index) {
+      // const temp = [...this.votes];
+      // temp[index].count++;
+      // this.votes = temp;
       this.votes[index].count++;
       this.changeStatus();
     },
