@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import '../styles/voting-card.css';
+import '../styles/global.css';
 
 import Booth from './Booth';
 import Result from './Result';
@@ -12,6 +13,10 @@ export default function VotingCard(props) {
   useEffect(() => {
     setOptions(props.votes.map(vote => vote.option));
   }, [props.votes]);
+
+  useEffect(() => {
+    setStatus(props.status);
+  }, [props.status]);
 
   function vote(index) {
     props.votes[index].count++;
