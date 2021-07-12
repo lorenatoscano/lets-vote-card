@@ -1,7 +1,7 @@
 import Booth from '../components/Booth.vue';
 
 export default {
-  title: 'Booth',
+  title: 'Vue/Booth',
   component: Booth,
 };
 

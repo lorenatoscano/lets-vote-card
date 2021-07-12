@@ -1,7 +1,7 @@
 import VotingCard from '../components/VotingCard.vue';
 
 export default {
-  title: 'VotingCard',
+  title: 'Vue/VotingCard',
   component: VotingCard,
   argTypes: {
     status: { control: { type: 'select', options: ['open', 'closed'] } },
@@ -18,7 +18,8 @@ const Template = (args) => ({
 
 export const Exemplo1 = Template.bind({});
 Exemplo1.args = {
-  title: "Adiamos a entrega",
+  status: 'open',
+  title: 'Adiamos a entrega',
   votes: [
     { option: 'Sim', count: 6 },
     { option: 'Não', count: 3 },
@@ -28,7 +29,8 @@ Exemplo1.args = {
 
 export const Exemplo2 = Template.bind({});
 Exemplo2.args = {
-  title: "Continuamos amanhã",
+  status: 'closed',
+  title: 'Continuamos amanhã',
   votes: [
     { option: 'Sim', count: 6 },
     { option: 'Não', count: 3 },

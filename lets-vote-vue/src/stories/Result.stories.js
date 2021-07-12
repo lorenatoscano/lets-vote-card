@@ -1,7 +1,7 @@
 import Result from '../components/Result.vue';
 
 export default {
-  title: 'Result',
+  title: 'Vue/Result',
   component: Result,
 };
 
@@ -19,5 +19,13 @@ Exemplo1.args = {
     { option: 'Sim', count: 6 },
     { option: 'Não', count: 3 },
     { option: 'Talvez', count: 1 },
+  ],
+}
+
+export const Exemplo2 = Template.bind({});
+Exemplo2.args = {
+  votes: [
+    { option: 'Sim', count: 6 },
+    { option: 'Não', count: 3 },
   ],
 }
