@@ -19,3 +19,10 @@
     return Math.round(100 * value / total);
   }
 </script>
+
+<style>
+p {
+  color: #666666;
+  font: 400 1rem "Inter", sans-serif;
+}
+</style>
