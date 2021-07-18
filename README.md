@@ -7,10 +7,10 @@ Componente de card de votação desenvolvido em Vue, React, Angular e Svelte par
 
 ## Implementação
 As implementações do componente em cada tecnologia estão nas suas respectivas branchs:
-* [Vue](https://github.com/lorenatoscano/lets-vote-card/tree/vue)
-* [React](https://github.com/lorenatoscano/lets-vote-card/tree/react)
-* [Svelte](https://github.com/lorenatoscano/lets-vote-card/tree/svelte)
-* [Angular](https://github.com/lorenatoscano/lets-vote-card/tree/angular)
+* [Vue](https://github.com/lorenatoscano/lets-vote-card/tree/vue/lets-vote-vue)
+* [React](https://github.com/lorenatoscano/lets-vote-card/tree/react/lets-vote-react)
+* [Svelte](https://github.com/lorenatoscano/lets-vote-card/tree/svelte/lets-vote-svelte)
+* [Angular](https://github.com/lorenatoscano/lets-vote-card/tree/angular/lets-vote-angular)
 ## Demo
 Acesse as bibliotecas de histórias no chromatic:
 * [Vue](https://www.chromatic.com/library?appId=60f437c3ede6ee003b697eef&branch=vue)
