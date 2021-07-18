@@ -1,5 +1,5 @@
 <template>
-  <VotingCard :title="title" :status="status" :votes="votes" @vote="vote" @changeStatus="changeStatus"/>
+  <VotingCard :title="title" :status="status" :votes="votes" @vote="onVote" />
 </template>
 
 <script>
@@ -22,7 +22,7 @@ export default {
     }
   },
   methods: {
-    vote(index) {
+    onVote(index) {
       this.votes[index].count++;
       this.changeStatus();
     },

@@ -3,6 +3,9 @@ import Booth from '../components/Booth.vue';
 export default {
   title: 'Vue/Booth',
   component: Booth,
+  argTypes: {
+    onVote: { action: "onVote" },
+  }
 };
 
 const Template = (args) => ({
