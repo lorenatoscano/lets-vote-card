@@ -3,7 +3,7 @@
   justify-content: space-around;
 }
 
-button {
+.booth-container button {
   width: 7rem;
   height: 2.5rem;
 
@@ -17,6 +17,7 @@ button {
   color: #fff;
   font-size: 1.25rem;
   font-weight: 600;
+  font-family: "Inter", sans-serif;
 
   cursor: pointer;
 
