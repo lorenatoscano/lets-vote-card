@@ -17,7 +17,6 @@ export default function Result(props) {
     let aux = 0;
     for (let vote of props.votes) {
       aux += vote.count;
-      console.log(aux);
     }
     setTotalVotes(aux);
   }, [props.votes]);
