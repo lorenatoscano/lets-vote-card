@@ -18,6 +18,9 @@ export default function Result(props) {
     for (let vote of props.votes) {
       aux += vote.count;
     }
+    if (aux === 0) {
+      aux = 1;
+    }
     setTotalVotes(aux);
   }, [props.votes]);
 
