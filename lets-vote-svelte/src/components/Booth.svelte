@@ -1,13 +1,12 @@
 <div class="booth-container">
-  {#each options as option, index (index)}
+  {#each $options as option, index (index)}
     <button on:click={dispatcher('vote', index)} >{option}</button>
   {/each}
 </div>
 
 <script>
 import { createEventDispatcher } from 'svelte';
-
-export let options;
+import { options } from './store.js';
 
 const dispatcher = createEventDispatcher();
 </script>

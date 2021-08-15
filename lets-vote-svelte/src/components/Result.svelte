@@ -11,11 +11,10 @@
 
   $: total = votes.reduce((x, y) => x + y.count, 0);
 
-  if (votes.length == 0) {
-    total = 1;
-  }
-
   function calculatePercentage(value) {
+    if (total == 0) {
+      return Math.round(100 * value);
+    }
     return Math.round(100 * value / total);
   }
 </script>

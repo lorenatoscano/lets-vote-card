@@ -47,10 +47,13 @@
 <script>
   import { createForm } from "svelte-forms-lib";
   import { createEventDispatcher } from 'svelte';
+  import { createVotation } from './store.js';
+
+  let votation = createVotation();
 
   const dispatcher = createEventDispatcher();
 
-  const { form, errors, state, handleChange, handleSubmit } = createForm({
+  const { form, errors, handleChange, handleSubmit } = createForm({
     initialValues: {
       title: "",
       threeOptions: "",
@@ -60,7 +63,7 @@
       if (values.title === "") {
         errs["required"] = "Título é obrigatório";
       }
-      if (values.title?.length > 30) {
+      if (values.title.length > 30) {
         errs["maxLength"] = "Máximo de 30 caracteres";
       }
       if (values.threeOptions === "") {
@@ -69,7 +72,9 @@
       return errs;
     },
     onSubmit: data => {
-      dispatcher('start', data)
+      votation.setTitle(data.title);
+      votation.setOptions(data.threeOptions);
+      dispatcher('start');
     }
   });
 </script>

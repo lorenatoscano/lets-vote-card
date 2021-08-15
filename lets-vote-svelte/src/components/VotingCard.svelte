@@ -1,7 +1,7 @@
 <div class="card-container">
-  <h2 class="title">{title}?</h2>
+  <h2 class="title">{$title}</h2>
   {#if status === 'open'}
-      <Booth {options} on:vote={onVote} />
+      <Booth on:vote={onVote} />
   {:else}
       <Result {votes} />
   {/if}
@@ -11,12 +11,13 @@
 <script>
   import Booth from './Booth.svelte';
   import Result from './Result.svelte';
+  import { title, options } from './store.js';
 
   export let status;
-  export let title;
-  export let votes;
 
-  $: options = votes.map(vote => vote.option);
+  $: votes = $options.map(option => {
+    return { option: option, count: 0 }
+  });
 
   function onVote(event) {
     let index = event.detail;

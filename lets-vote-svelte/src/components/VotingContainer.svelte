@@ -1,6 +1,6 @@
 <div class="overlay">
   {#if isStarted}
-    <VotingCard {votes} {title} {status} />
+    <VotingCard {status} />
   {:else}
     <VotingForm on:start={startVotation} />
   {/if}
@@ -11,26 +11,9 @@
   import VotingForm from './VotingForm.svelte';
 
   let isStarted = false;
-  let votes = [
-    { option: 'Sim', count: 6 },
-    { option: 'Não', count: 3 },
-    { option: 'Talvez', count: 1 },
-  ];
-
-  let title = 'Reunião amanhã';
   let status = 'open';
-  let options = [];
 
-  function startVotation(event) {
-    let data = event.detail;
-    
-    title = data.title;
-    if (Number(data.threeOptions)) {
-      options = ['Sim', 'Não', 'Talvez'];
-    } else {
-      options = ['Sim', 'Não'];
-    }
-
+  function startVotation() {
     isStarted = true;
   }
 </script>
