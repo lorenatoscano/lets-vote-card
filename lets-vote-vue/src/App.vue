@@ -1,14 +1,14 @@
 <template>
-  <VotingCard :title="title" :status="status" :votes="votes" @vote="onVote" />
+  <VotingContainer />
 </template>
 
 <script>
-import VotingCard from './components/VotingCard.vue';
+import VotingContainer from './components/VotingContainer.vue';
 
 export default {
   name: 'App',
   components: {
-    VotingCard 
+    VotingContainer 
   },
   data() {
     return {
@@ -34,11 +34,5 @@ export default {
 </script>
 
 <style>
-body {
-  color: #666666;
-}
 
-body, button {
-  font: 400 1rem "Inter", sans-serif;
-}
 </style>

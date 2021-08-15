@@ -8,9 +8,12 @@
     "lint": "vue-cli-service lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "chromatic": "npx chromatic --project-token=26e71e83316d"
+    "chromatic": "npx chromatic --project-token=26e71e83316d --auto-accept-changes"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.1.1",
+    "@vuelidate/core": "^2.0.0-alpha.24",
+    "@vuelidate/validators": "^2.0.0-alpha.21",
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },
