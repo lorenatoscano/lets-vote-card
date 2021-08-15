@@ -3,7 +3,7 @@
 </p>
 
 ## Sobre
-Componente de card de votação desenvolvido em Vue, React, Angular e Svelte para a disciplina de Frameworks Javascript do BTI. O componente possui o estado de "cabine" da votação e o de "resultado" da votação.
+Componente de card de votação desenvolvido em Vue, React, Angular e Svelte para a disciplina de Frameworks Javascript do BTI.
 
 ## Implementação
 As implementações do componente em cada tecnologia estão nas suas respectivas branchs:
@@ -14,6 +14,6 @@ As implementações do componente em cada tecnologia estão nas suas respectivas
 ## Demo
 Acesse as bibliotecas de histórias no chromatic:
 * [Vue](https://www.chromatic.com/library?appId=60f437c3ede6ee003b697eef&branch=vue)
-* [React](https://www.chromatic.com/library?appId=60f437c3ede6ee003b697eef&branch=react)
-* [Svelte](https://www.chromatic.com/library?appId=60f437c3ede6ee003b697eef&branch=svelte)
+* [React](https://60f437c3ede6ee003b697eef-tkvphfrrwl.chromatic.com/?path=/story/react-demo--demo)
+* [Svelte](https://60f437c3ede6ee003b697eef-xjqzoiajrq.chromatic.com/?path=/story/svelte-demo--demo)
 * [Angular](https://www.chromatic.com/library?appId=60f437c3ede6ee003b697eef&branch=angular)
