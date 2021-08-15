@@ -13,7 +13,7 @@ As implementações do componente em cada tecnologia estão nas suas respectivas
 * [Angular](https://github.com/lorenatoscano/lets-vote-card/tree/angular/lets-vote-angular)
 ## Demo
 Acesse as bibliotecas de histórias no chromatic:
-* [Vue](https://www.chromatic.com/library?appId=60f437c3ede6ee003b697eef&branch=vue)
+* [Vue](https://60f437c3ede6ee003b697eef-skrfpxmdgj.chromatic.com/?path=/story/vue-demo--demo)
 * [React](https://60f437c3ede6ee003b697eef-tkvphfrrwl.chromatic.com/?path=/story/react-demo--demo)
 * [Svelte](https://60f437c3ede6ee003b697eef-xjqzoiajrq.chromatic.com/?path=/story/svelte-demo--demo)
 * [Angular](https://www.chromatic.com/library?appId=60f437c3ede6ee003b697eef&branch=angular)
