@@ -1,7 +1,7 @@
 import VotingContainer from '../components/VotingContainer.js';
 
 export default {
-  title: 'React/VotingContainer',
+  title: 'React/Demo',
   component: VotingContainer,
 };
 
