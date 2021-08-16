@@ -1,0 +1,44 @@
+<div class="card-container">
+  <h2 class="title">Inicie uma votação</h2>
+    <form>
+      <div class="form-field">
+        <label>Título:</label>
+        <input
+          #input="ngModel"
+          name="title"
+          type="text"
+          placeholder="O que gostaria de perguntar?"
+          [(ngModel)]="title"
+          required
+          maxlength="30"
+        />
+        <div *ngIf="input.invalid && input.touched">
+          <span *ngIf="input.errors!.required">
+            Título é obrigatório.
+          </span>
+          <span *ngIf="input.errors!.maxlength">
+            Máximo de 30 caracteres
+          </span>
+        </div>
+      </div>
+      
+      <div class="form-field">
+        <label>Opções de voto:</label>
+        <select 
+          #select="ngModel"
+          [(ngModel)]="threeOptions"
+          required
+        >
+          <option value="0">Sim, não</option>
+          <option value="1">Sim, não, talvez</option>
+        </select>
+        <div *ngIf="select.invalid && select.touched">
+          <span *ngIf="select.errors!.required">
+            Opções são obrigatórias.
+          </span>
+        </div>
+      </div>
+
+      <button type="submit">Começar</button>
+    </form>
+</div>

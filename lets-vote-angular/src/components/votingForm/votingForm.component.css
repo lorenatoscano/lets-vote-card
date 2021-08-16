@@ -1,0 +1,36 @@
+.form-field {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.form-field input, select {
+  display: block;
+  width: 100%;
+  height: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #2e384d;
+  border: solid 1px #666666;
+  border-radius: 5px;
+}
+
+.form-field input:focus-visible:not(.field-invalid), select:focus-visible {
+  outline: #2e384d auto 1px;
+}
+
+.form-field span {
+  font-size: 0.9rem;
+  color: #D65151;
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid {
+  border: solid 1px #D65151 !important;
+}
+
+.ng-invalid:focus-visible {
+  outline: #D65151 auto 1px;
+}
+
+.form-field select {
+  height: 2.25rem;
+}
