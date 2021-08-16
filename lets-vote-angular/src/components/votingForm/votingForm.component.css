@@ -23,7 +23,7 @@
   color: #D65151;
 }
 
-input.ng-invalid.ng-touched, select.ng-invalid {
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
   border: solid 1px #D65151 !important;
 }
 
