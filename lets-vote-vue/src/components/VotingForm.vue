@@ -1,8 +1,8 @@
 <template>
   <div class="card-container">
-    <h2 className="title">Inicie uma votação</h2>
+    <h2 class="title">Inicie uma votação</h2>
       <form @submit.prevent="handleSubmit">
-        <div className="form-field">
+        <div class="form-field">
           <label>Título:</label>
           <input
             type="text"
@@ -15,7 +15,7 @@
           </div>
         </div>
         
-        <div className="form-field">
+        <div class="form-field">
           <label>Opções de voto:</label>
           <select 
             v-model="v$.threeOptions.$model"
@@ -72,29 +72,6 @@ export default {
       this.$emit('start');
     }
   }
-
-  // data() {
-  //   return {
-  //     form: {
-  //       title: '',
-  //       threeOptions: '',
-  //     },
-  //   }
-  // },
-
-  // validations() {
-  //   return {
-  //     form: {
-  //       title: {
-  //          required,
-  //          max: maxLength(30)
-  //       },
-  //       threeOptions: {
-  //           required
-  //       },
-  //     },
-  //   }
-  // },
 }
 </script>
 

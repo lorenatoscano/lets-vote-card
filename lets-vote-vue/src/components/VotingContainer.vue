@@ -21,14 +21,9 @@ export default {
       isStarted.value = true;
     }
 
-    const changeStatus = () => {
-      status.value = status.value == 'open' ? 'closed' : 'open';
-    };
-
     return {
       isStarted,
       status,
-      changeStatus,
       startVotation
     };
   }
