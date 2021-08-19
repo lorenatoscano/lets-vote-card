@@ -1,7 +1,71 @@
 {
     "pipes": [],
     "interfaces": [],
-    "injectables": [],
+    "injectables": [
+        {
+            "name": "StoreService",
+            "id": "injectable-StoreService-71ada5c66f45ebf3c0d9c99f59ead4cc",
+            "file": "src/store.service.ts",
+            "properties": [
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                }
+            ],
+            "methods": [
+                {
+                    "name": "setOptions",
+                    "args": [
+                        {
+                            "name": "threeOptions",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 10,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "threeOptions",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Injectable } from '@angular/core'\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\n\r\nexport class StoreService {\r\n  options: string[] = [];\r\n  title: string = \"\"\r\n\r\n  setOptions(threeOptions: number) {\r\n    if (threeOptions) {\r\n      this.options = ['Sim', 'Não', 'Talvez'];\r\n    } else {\r\n      this.options = ['Sim', 'Não'];\r\n    }\r\n  }\r\n}",
+            "type": "injectable"
+        }
+    ],
     "guards": [],
     "interceptors": [],
     "classes": [],
@@ -9,7 +73,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-a9ff591df8c879c29f3bc703d17bfbee",
+            "id": "component-AppComponent-d425f55bf74dd961eb9ceeab61e3c20a",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -27,38 +91,7 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
-            "propertiesClass": [
-                {
-                    "name": "status",
-                    "defaultValue": "'open'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 10
-                },
-                {
-                    "name": "title",
-                    "defaultValue": "'Reunião amanhã'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 9
-                },
-                {
-                    "name": "votes",
-                    "defaultValue": "[\n    { option: 'Sim', count: 6 },\n    { option: 'Não', count: 3 },\n    { option: 'Talvez', count: 1 },\n  ]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "[]",
-                    "optional": false,
-                    "description": "",
-                    "line": 11
-                }
-            ],
+            "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
@@ -67,7 +100,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css']\n})\nexport class AppComponent {\n  title = 'Reunião amanhã';\n  status = 'open';\n  votes = [\n    { option: 'Sim', count: 6 },\n    { option: 'Não', count: 3 },\n    { option: 'Talvez', count: 1 },\n  ];\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.css']\r\n})\r\nexport class AppComponent {\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -76,12 +109,12 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<voting-card [title]=\"title\" [status]=\"status\" [votes]=\"votes\"></voting-card>\n\n"
+            "templateData": "<voting-container></voting-container>\r\n\r\n"
         },
         {
             "name": "BoothComponent",
             "id": "component-BoothComponent-3a6c457992fd61a3420fa743ab3db8d7",
-            "file": "src/app/booth.component.ts",
+            "file": "src/components/booth/booth.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -138,8 +171,8 @@
         },
         {
             "name": "ResultComponent",
-            "id": "component-ResultComponent-e544b0802b0a04e7cee9eacf26f85760",
-            "file": "src/app/result.component.ts",
+            "id": "component-ResultComponent-8146b0fc1929d321183c2a26bba870bf",
+            "file": "src/components/result/result.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -180,7 +213,7 @@
                     "optional": false,
                     "returnType": "any",
                     "typeParameters": [],
-                    "line": 20,
+                    "line": 22,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -203,7 +236,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from \"@angular/core\";\r\n\r\n@Component({\r\n  selector: 'result',\r\n  templateUrl: './result.component.html',\r\n  styleUrls: ['./result.component.css']\r\n})\r\n\r\nexport class ResultComponent {\r\n  @Input() votes: any[] = [];\r\n\r\n  get total() {\r\n    if (this.votes.length == 0) {\r\n      return 1;\r\n    }\r\n\r\n    return this.votes.reduce((x, y) => x + y.count, 0);\r\n  }\r\n\r\n  calculatePercentage(value: number) {\r\n    return Math.round(100 * value / this.total);\r\n  }\r\n}",
+            "sourceCode": "import { Component, Input } from \"@angular/core\";\r\n\r\n@Component({\r\n  selector: 'result',\r\n  templateUrl: './result.component.html',\r\n  styleUrls: ['./result.component.css']\r\n})\r\n\r\nexport class ResultComponent {\r\n  @Input() votes: any[] = [];\r\n\r\n  get total() {\r\n    let total = this.votes.reduce((x, y) => x + y.count, 0);\r\n\r\n    if (total == 0) {\r\n      return 1;\r\n    }\r\n\r\n    return total;\r\n  }\r\n\r\n  calculatePercentage(value: number) {\r\n    return Math.round(100 * value / this.total);\r\n  }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -227,8 +260,8 @@
         },
         {
             "name": "VotingCardComponent",
-            "id": "component-VotingCardComponent-5c2538eda453feac5d2287060e151bae",
-            "file": "src/app/votingCard.component.ts",
+            "id": "component-VotingCardComponent-f3e0512157c008334f2f03b6163613be",
+            "file": "src/components/votingCard/votingCard.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -249,29 +282,46 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 13,
                     "type": "string"
-                },
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
                 {
-                    "name": "title",
-                    "defaultValue": "''",
+                    "name": "store",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string"
+                    "type": "StoreService",
+                    "optional": false,
+                    "description": "",
+                    "line": 11,
+                    "modifierKind": [
+                        122
+                    ]
                 },
                 {
                     "name": "votes",
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
-                    "type": "any[]"
+                    "type": "literal type[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
                 }
             ],
-            "outputsClass": [],
-            "propertiesClass": [],
             "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
                 {
                     "name": "onVote",
                     "args": [
@@ -285,7 +335,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 18,
+                    "line": 25,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -308,39 +358,244 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from \"@angular/core\";\r\n\r\n@Component({\r\n  selector: 'voting-card',\r\n  templateUrl: './votingCard.component.html',\r\n  styleUrls: ['./votingCard.component.css']\r\n})\r\n\r\nexport class VotingCardComponent {\r\n  @Input() title: string = '';\r\n  @Input() status: string = '';\r\n  @Input() votes: any[] = [];\r\n\r\n  get options() {\r\n    return this.votes.map(vote => vote.option);\r\n  }\r\n\r\n  onVote(index: number) {\r\n    this.votes[index].count++;\r\n    this.status = 'closed';\r\n  }\r\n}\r\n\r\n",
+            "sourceCode": "import { Component, Input } from \"@angular/core\";\r\nimport { StoreService } from \"src/store.service\";\r\n\r\n@Component({\r\n  selector: 'voting-card',\r\n  templateUrl: './votingCard.component.html',\r\n  styleUrls: ['./votingCard.component.css']\r\n})\r\n\r\nexport class VotingCardComponent {\r\n  constructor(public store: StoreService) { }\r\n\r\n  @Input() status: string = '';\r\n  votes: { option: string, count: number }[] = [];\r\n\r\n  ngOnInit() {\r\n    this.votes = this.store.options.map(option => {\r\n      return {\r\n        option: option,\r\n        count: 0,\r\n      };\r\n    });\r\n  }\r\n\r\n  onVote(index: number) {\r\n    this.votes[index].count++;\r\n    this.status = 'closed';\r\n  }\r\n}\r\n\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".overlay {\r\n  background: rgba(242, 243, 245, 0.8);\r\n  position: fixed;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: 0;\r\n  right: 0;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n.card-container {\r\n  background: var(--white);\r\n  width: 100%;\r\n  max-width: 400px;\r\n  padding: 2rem 3rem;\r\n  border-radius: 5px;\r\n  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);\r\n  text-align: center;\r\n  position: relative;\r\n}\r\n.title {\r\n  color: #2e384d\r\n}",
+                    "data": "",
                     "styleUrl": "./votingCard.component.css"
                 }
             ],
             "stylesData": "",
-            "accessors": {
-                "options": {
-                    "name": "options",
-                    "getSignature": {
-                        "name": "options",
-                        "type": "",
-                        "returnType": "",
-                        "line": 14
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "store",
+                        "type": "StoreService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
                     }
-                }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "store",
+                        "type": "StoreService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
             },
-            "templateData": "<div class=\"overlay\">\r\n  <div class=\"card-container\">\r\n    <h2 class=\"title\">{{title}}?</h2>\r\n      <div *ngIf=\"status === 'open'; else result\">\r\n        <booth [options]=\"options\" (vote)=\"onVote($event)\"></booth>\r\n      </div>\r\n      <ng-template #result>\r\n        <result [votes]=\"votes\"></result>\r\n      </ng-template> \r\n  </div>\r\n</div>"
+            "templateData": "<div class=\"card-container\">\r\n  <h2 class=\"title\">{{store.title}}</h2>\r\n    <div *ngIf=\"status === 'open'; else result\">\r\n      <booth [options]=\"store.options\" (vote)=\"onVote($event)\"></booth>\r\n    </div>\r\n    <ng-template #result>\r\n      <result [votes]=\"votes\"></result>\r\n    </ng-template> \r\n</div>\r\n"
+        },
+        {
+            "name": "VotingContainerComponent",
+            "id": "component-VotingContainerComponent-86b94d49d3ab534ba9b3e7c516399d32",
+            "file": "src/components/votingContainer/votingContainer.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "voting-container",
+            "styleUrls": [
+                "./votingContainer.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./votingContainer.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "isStarted",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "status",
+                    "defaultValue": "'open'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "votes",
+                    "defaultValue": "[\r\n    { option: 'Sim', count: 6 },\r\n    { option: 'Não', count: 3 },\r\n    { option: 'Talvez', count: 1 },\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from \"@angular/core\";\r\n\r\n@Component({\r\n  selector: 'voting-container',\r\n  templateUrl: './votingContainer.component.html',\r\n  styleUrls: ['./votingContainer.component.css']\r\n})\r\n\r\nexport class VotingContainerComponent {\r\n  isStarted = false;\r\n  status = 'open';\r\n  votes = [\r\n    { option: 'Sim', count: 6 },\r\n    { option: 'Não', count: 3 },\r\n    { option: 'Talvez', count: 1 },\r\n  ];\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./votingContainer.component.css"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"overlay\">\r\n  <div *ngIf=\"isStarted; else form\">\r\n    <voting-card [status]=\"status\"></voting-card>\r\n  </div>\r\n  <ng-template #form>\r\n    <voting-form (start)=\"isStarted = true\"></voting-form>\r\n  </ng-template> \r\n</div>"
+        },
+        {
+            "name": "VotingFormComponent",
+            "id": "component-VotingFormComponent-4b4455eccdff7eb16301505bb56ff6c7",
+            "file": "src/components/votingForm/votingForm.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "voting-form",
+            "styleUrls": [
+                "./votingForm.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./votingForm.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "start",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "store",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoreService",
+                    "optional": false,
+                    "description": "",
+                    "line": 11,
+                    "modifierKind": [
+                        122
+                    ]
+                },
+                {
+                    "name": "threeOptions",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "title",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "handleSubmit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from \"@angular/core\";\r\nimport { StoreService } from \"src/store.service\";\r\n\r\n@Component({\r\n  selector: 'voting-form',\r\n  templateUrl: './votingForm.component.html',\r\n  styleUrls: ['./votingForm.component.css']\r\n})\r\n\r\nexport class VotingFormComponent {\r\n  constructor(public store: StoreService) { }\r\n\r\n  @Output() start = new EventEmitter();\r\n\r\n  title = '';\r\n  threeOptions = '';\r\n\r\n  handleSubmit() {\r\n    this.store.title = this.title;\r\n    this.store.setOptions(Number(this.threeOptions));\r\n\r\n    this.start.emit(\"start\");\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".form-field {\r\n  text-align: left;\r\n  margin-bottom: 1rem;\r\n}\r\n\r\n.form-field input, select {\r\n  display: block;\r\n  width: 100%;\r\n  height: 2rem;\r\n  margin-top: 0.5rem;\r\n  margin-bottom: 0.5rem;\r\n  color: #2e384d;\r\n  border: solid 1px #666666;\r\n  border-radius: 5px;\r\n}\r\n\r\n.form-field input:focus-visible:not(.field-invalid), select:focus-visible {\r\n  outline: #2e384d auto 1px;\r\n}\r\n\r\n.form-field span {\r\n  font-size: 0.9rem;\r\n  color: #D65151;\r\n}\r\n\r\ninput.ng-invalid.ng-touched, select.ng-invalid.ng-touched {\r\n  border: solid 1px #D65151 !important;\r\n}\r\n\r\n.ng-invalid:focus-visible {\r\n  outline: #D65151 auto 1px;\r\n}\r\n\r\n.form-field select {\r\n  height: 2.25rem;\r\n}\r\n",
+                    "styleUrl": "./votingForm.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "store",
+                        "type": "StoreService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "store",
+                        "type": "StoreService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<div class=\"card-container\">\r\n  <h2 class=\"title\">Inicie uma votação</h2>\r\n    <form #voteForm=\"ngForm\" (ngSubmit)=\"voteForm.form.valid && handleSubmit()\" >\r\n      <div class=\"form-field\">\r\n        <label>Título:</label>\r\n        <input\r\n          #input=\"ngModel\"\r\n          name=\"input\"\r\n          type=\"text\"\r\n          placeholder=\"O que gostaria de perguntar?\"\r\n          [(ngModel)]=\"title\"\r\n          required\r\n          maxlength=\"30\"\r\n        />\r\n        <div *ngIf=\"input.invalid && input.touched\">\r\n          <span *ngIf=\"input.errors!.required\">\r\n            Título é obrigatório.\r\n          </span>\r\n          <span *ngIf=\"input.errors!.maxlength\">\r\n            Máximo de 30 caracteres\r\n          </span>\r\n        </div>\r\n      </div>\r\n      \r\n      <div class=\"form-field\">\r\n        <label>Opções de voto:</label>\r\n        <select \r\n          name=\"select\"\r\n          #select=\"ngModel\"\r\n          [(ngModel)]=\"threeOptions\"\r\n          required\r\n        >\r\n          <option value=\"0\">Sim, não</option>\r\n          <option value=\"1\">Sim, não, talvez</option>\r\n        </select>\r\n        <div *ngIf=\"select.invalid && select.touched\">\r\n          <span *ngIf=\"select.errors!.required\">\r\n            Opções são obrigatórias.\r\n          </span>\r\n        </div>\r\n      </div>\r\n\r\n      <button type=\"submit\">Começar</button>\r\n    </form>\r\n</div>"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-b398b7f0d8e5b2fd41150c034a33a305",
+            "id": "module-AppModule-1a34e6e90dad815c2f3eab592a825c7c",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppComponent } from './app.component';\nimport { BoothComponent } from './booth.component';\nimport { ResultComponent } from './result.component';\nimport { VotingCardComponent } from './votingCard.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    VotingCardComponent,\n    BoothComponent,\n    ResultComponent\n  ],\n  imports: [\n    BrowserModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { FormsModule } from '@angular/forms'\r\n\r\nimport { AppComponent } from './app.component';\r\nimport { BoothComponent } from '../components/booth/booth.component';\r\nimport { ResultComponent } from '../components/result/result.component';\r\nimport { VotingCardComponent } from '../components/votingCard/votingCard.component';\r\nimport { VotingFormComponent } from '../components/votingForm/votingForm.component';\r\nimport { VotingContainerComponent } from '../components/votingContainer/votingContainer.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    VotingContainerComponent,\r\n    VotingFormComponent,\r\n    VotingCardComponent,\r\n    BoothComponent,\r\n    ResultComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    FormsModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -360,6 +615,12 @@
                         },
                         {
                             "name": "VotingCardComponent"
+                        },
+                        {
+                            "name": "VotingContainerComponent"
+                        },
+                        {
+                            "name": "VotingFormComponent"
                         }
                     ]
                 },
@@ -389,14 +650,14 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "environment",
+                "name": "Demo",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
+                "file": "src/stories/VotingContainer.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false\n}"
+                "type": "",
+                "defaultValue": "Template.bind({})"
             },
             {
                 "name": "environment",
@@ -406,7 +667,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
-                "defaultValue": "{\n  production: true\n}"
+                "defaultValue": "{\r\n  production: true\r\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\r\n  production: false\r\n}"
             },
             {
                 "name": "Exemplo1",
@@ -419,30 +690,10 @@
                 "defaultValue": "Template.bind({})"
             },
             {
-                "name": "Exemplo1",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/VotingCard.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
                 "name": "Exemplo2",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/Result.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Exemplo2",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/stories/VotingCard.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -472,16 +723,6 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Booth.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<BoothComponent>",
-                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/stories/Result.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -492,10 +733,20 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/VotingCard.stories.ts",
+                "file": "src/stories/Booth.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<VotingCardComponent>",
+                "type": "Story<BoothComponent>",
+                "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/VotingContainer.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<VotingContainerComponent>",
                 "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
             }
         ],
@@ -503,16 +754,26 @@
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "src/environments/environment.ts": [
+            "src/stories/VotingContainer.stories.ts": [
                 {
-                    "name": "environment",
+                    "name": "Demo",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/environments/environment.ts",
+                    "file": "src/stories/VotingContainer.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false\n}"
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/VotingContainer.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<VotingContainerComponent>",
+                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -524,7 +785,19 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
+                    "defaultValue": "{\r\n  production: true\r\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\r\n  production: false\r\n}"
                 }
             ],
             "src/stories/Result.stories.ts": [
@@ -556,38 +829,6 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<ResultComponent>",
-                    "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/stories/VotingCard.stories.ts": [
-                {
-                    "name": "Exemplo1",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/VotingCard.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Exemplo2",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/VotingCard.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/stories/VotingCard.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<VotingCardComponent>",
                     "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
                 }
             ],
@@ -639,11 +880,11 @@
                 "linktype": "component",
                 "name": "AppComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/app/booth.component.ts",
+                "filePath": "src/components/booth/booth.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "BoothComponent",
@@ -652,7 +893,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/result.component.ts",
+                "filePath": "src/components/result/result.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ResultComponent",
@@ -661,12 +902,30 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/votingCard.component.ts",
+                "filePath": "src/components/votingCard/votingCard.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "VotingCardComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/votingContainer/votingContainer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "VotingContainerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/components/votingForm/votingForm.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "VotingFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
                 "status": "low"
             },
             {
@@ -687,6 +946,15 @@
                 "name": "environment",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/store.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "StoreService",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -750,27 +1018,17 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/VotingCard.stories.ts",
+                "filePath": "src/stories/VotingContainer.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Exemplo1",
+                "name": "Demo",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/VotingCard.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Exemplo2",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/stories/VotingCard.stories.ts",
+                "filePath": "src/stories/VotingContainer.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",

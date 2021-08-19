@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { BoothComponent } from 'src/app/booth.component';
+import { BoothComponent } from 'src/components/booth/booth.component';
 
 export default {
   title: 'Angular/Booth',

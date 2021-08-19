@@ -9,9 +9,4 @@ import { Component } from "@angular/core";
 export class VotingContainerComponent {
   isStarted = false;
   status = 'open';
-  votes = [
-    { option: 'Sim', count: 6 },
-    { option: 'Não', count: 3 },
-    { option: 'Talvez', count: 1 },
-  ];
 }

@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { ResultComponent } from 'src/app/result.component';
+import { ResultComponent } from 'src/components/result/result.component';
 
 export default {
   title: 'Angular/Result',
