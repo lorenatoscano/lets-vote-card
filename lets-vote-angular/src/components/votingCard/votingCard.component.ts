@@ -23,7 +23,6 @@ export class VotingCardComponent {
   }
 
   onVote(index: number) {
-    console.log(this.votes[index]);
     this.votes[index].count++;
     this.status = 'closed';
   }

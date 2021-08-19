@@ -20,8 +20,6 @@ export class ResultComponent {
   }
 
   calculatePercentage(value: number) {
-    console.log("valor " + value);
-
     return Math.round(100 * value / this.total);
   }
 }
