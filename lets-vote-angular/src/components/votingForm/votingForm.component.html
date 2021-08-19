@@ -1,6 +1,6 @@
 <div class="card-container">
   <h2 class="title">Inicie uma votação</h2>
-    <form>
+    <form #voteForm="ngForm" (ngSubmit)="voteForm.form.valid && handleSubmit()" >
       <div class="form-field">
         <label>Título:</label>
         <input

@@ -8,7 +8,6 @@ import { Component } from "@angular/core";
 
 export class VotingContainerComponent {
   isStarted = false;
-  title = 'Reunião amanhã';
   status = 'open';
   votes = [
     { option: 'Sim', count: 6 },

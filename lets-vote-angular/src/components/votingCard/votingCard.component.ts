@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { StoreService } from "src/store.service";
 
 @Component({
   selector: 'voting-card',
@@ -7,15 +8,22 @@ import { Component, Input } from "@angular/core";
 })
 
 export class VotingCardComponent {
-  @Input() title: string = '';
-  @Input() status: string = '';
-  @Input() votes: any[] = [];
+  constructor(public store: StoreService) { }
 
-  get options() {
-    return this.votes.map(vote => vote.option);
+  @Input() status: string = '';
+  votes: { option: string, count: number }[] = [];
+
+  ngOnInit() {
+    this.votes = this.store.options.map(option => {
+      return {
+        option: option,
+        count: 0,
+      };
+    });
   }
 
   onVote(index: number) {
+    console.log(this.votes[index]);
     this.votes[index].count++;
     this.status = 'closed';
   }

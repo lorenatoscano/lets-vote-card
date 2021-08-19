@@ -10,14 +10,18 @@ export class ResultComponent {
   @Input() votes: any[] = [];
 
   get total() {
-    if (this.votes.length == 0) {
+    let total = this.votes.reduce((x, y) => x + y.count, 0);
+
+    if (total == 0) {
       return 1;
     }
 
-    return this.votes.reduce((x, y) => x + y.count, 0);
+    return total;
   }
 
   calculatePercentage(value: number) {
+    console.log("valor " + value);
+
     return Math.round(100 * value / this.total);
   }
 }

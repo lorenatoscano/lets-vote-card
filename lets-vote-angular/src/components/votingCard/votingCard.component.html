@@ -1,7 +1,7 @@
 <div class="card-container">
-  <h2 class="title">{{title}}?</h2>
+  <h2 class="title">{{store.title}}</h2>
     <div *ngIf="status === 'open'; else result">
-      <booth [options]="options" (vote)="onVote($event)"></booth>
+      <booth [options]="store.options" (vote)="onVote($event)"></booth>
     </div>
     <ng-template #result>
       <result [votes]="votes"></result>

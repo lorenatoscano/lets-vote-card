@@ -1,8 +1,8 @@
 <div class="overlay">
   <div *ngIf="isStarted; else form">
-    <voting-card [title]="title" [status]="status" [votes]="votes"></voting-card>
+    <voting-card [status]="status"></voting-card>
   </div>
   <ng-template #form>
-    <voting-form></voting-form>
+    <voting-form (start)="isStarted = true"></voting-form>
   </ng-template> 
 </div>
