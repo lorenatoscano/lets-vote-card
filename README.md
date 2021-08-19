@@ -16,4 +16,4 @@ Acesse as bibliotecas de histórias no chromatic:
 * [Vue](https://60f437c3ede6ee003b697eef-skrfpxmdgj.chromatic.com/?path=/story/vue-demo--demo)
 * [React](https://60f437c3ede6ee003b697eef-tkvphfrrwl.chromatic.com/?path=/story/react-demo--demo)
 * [Svelte](https://60f437c3ede6ee003b697eef-xjqzoiajrq.chromatic.com/?path=/story/svelte-demo--demo)
-* [Angular](https://www.chromatic.com/library?appId=60f437c3ede6ee003b697eef&branch=angular)
+* [Angular](https://60f437c3ede6ee003b697eef-mhesmqocjs.chromatic.com/?path=/story/angular-demo--demo)
