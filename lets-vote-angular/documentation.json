@@ -397,7 +397,7 @@
         },
         {
             "name": "VotingContainerComponent",
-            "id": "component-VotingContainerComponent-86b94d49d3ab534ba9b3e7c516399d32",
+            "id": "component-VotingContainerComponent-b2f52a503c1bf9b129580c6150e8a6c7",
             "file": "src/components/votingContainer/votingContainer.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -435,16 +435,6 @@
                     "optional": false,
                     "description": "",
                     "line": 11
-                },
-                {
-                    "name": "votes",
-                    "defaultValue": "[\r\n    { option: 'Sim', count: 6 },\r\n    { option: 'Não', count: 3 },\r\n    { option: 'Talvez', count: 1 },\r\n  ]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "[]",
-                    "optional": false,
-                    "description": "",
-                    "line": 12
                 }
             ],
             "methodsClass": [],
@@ -455,7 +445,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from \"@angular/core\";\r\n\r\n@Component({\r\n  selector: 'voting-container',\r\n  templateUrl: './votingContainer.component.html',\r\n  styleUrls: ['./votingContainer.component.css']\r\n})\r\n\r\nexport class VotingContainerComponent {\r\n  isStarted = false;\r\n  status = 'open';\r\n  votes = [\r\n    { option: 'Sim', count: 6 },\r\n    { option: 'Não', count: 3 },\r\n    { option: 'Talvez', count: 1 },\r\n  ];\r\n}\r\n",
+            "sourceCode": "import { Component } from \"@angular/core\";\r\n\r\n@Component({\r\n  selector: 'voting-container',\r\n  templateUrl: './votingContainer.component.html',\r\n  styleUrls: ['./votingContainer.component.css']\r\n})\r\n\r\nexport class VotingContainerComponent {\r\n  isStarted = false;\r\n  status = 'open';\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -723,20 +713,20 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Result.stories.ts",
+                "file": "src/stories/Booth.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ResultComponent>",
+                "type": "Story<BoothComponent>",
                 "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/stories/Booth.stories.ts",
+                "file": "src/stories/Result.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<BoothComponent>",
+                "type": "Story<ResultComponent>",
                 "defaultValue": "(args) => ({\r\n  props: args,\r\n})"
             },
             {
@@ -916,7 +906,7 @@
                 "linktype": "component",
                 "name": "VotingContainerComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
